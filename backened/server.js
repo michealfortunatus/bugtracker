@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const app = express();
 
-mongoose.connect(,{}, (err) =>{
+mongoose.connect(process.env.DB_URL,{useNewUrlParser:true, useUnifiedTopology:true}, (err) =>{
     if {!err} return console.log('connected to DB')
     console.log{err}
 })
