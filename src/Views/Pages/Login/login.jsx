@@ -128,10 +128,11 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './login.css';
-import { signIn } from '../../../Controllers/redux/authSlice';
+import { signIn } from '../../../Controllers/Redux/authSlice';
 
 export default function Login() {
   const dispatch = useDispatch();
+  // const { loggedIn } = useSelector((state) => state.auth);
   const [formInput, setFormInput] = useState({
     name: '',
     password: ''
@@ -144,12 +145,28 @@ export default function Login() {
     });
   }
 
-  function submit(e) {
+  // function submit(e) {
+  //   e.preventDefault();
+  //   const { name, password } = formInput;
+  //   dispatch(signIn(name, password));
+  //   e.preventDefault();
+  // }
+
+  // function submit(e) {
+  //   e.preventDefault();
+  //   const { name, password } = formInput;
+  //   dispatch(signIn(name, password));
+  // }
+  function submit(e){
+    dispatch(signIn(formInput));
     e.preventDefault();
-    const { name, password } = formInput;
-    dispatch(signIn(name, password));
-    e.preventDefault();
+
   }
+  // if (loggedIn) {
+  //   // Redirect to authenticated page
+  //   return <Redirect to="/Dashboard" />;
+  // }
+  
 
   return (
     <div className='loginBG'>
@@ -169,6 +186,8 @@ export default function Login() {
           value={formInput.password}
         />
         <button type='submit' onClick={submit}>Login</button>
+        console.log(submit);
+        
       </form>
     </div>
   );

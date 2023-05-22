@@ -4,9 +4,10 @@ import {retrieveBugs} from '../bugController';
 
 const slice =createSlice({
     name:'bug',
-    initialState:[{}],
+    initialState:[],
     reducers:{
         getBugs:state =>retrieveBugs(),
+
         createBugs:(state,actions) =>{
 
         },

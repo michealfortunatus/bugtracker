@@ -29,7 +29,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { signOut } from '../../Controllers/redux/authSlice';
+import { signOut } from '../../Controllers/Redux/authSlice';
 import './sidebar.css';
 
 export default function Sidebar() {

@@ -42,7 +42,7 @@ import ViewSection from './component/bugViewSection';
 import './bugView.css';
 import BugModel from '../../../Models/bugModel';
 import { useDispatch } from 'react-redux';
-import { markComplete } from '../../../Controllers/redux/bugSlice';
+import { markComplete } from '../../../Controllers/Redux/bugSlice';
 import EditPanel from '../edit delete/editPanel';
 import EditBug from '../Bugcreate/bugform';
 

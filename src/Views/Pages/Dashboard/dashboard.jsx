@@ -45,7 +45,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getBugs } from '../../../Controllers/redux/bugSlice';
+import { getBugs } from '../../../Controllers/Redux/bugSlice';
 import Card from '../../Components/Dashboard/card';
 
 export default function Dashboard() {

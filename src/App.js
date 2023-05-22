@@ -2,7 +2,7 @@
  import { useSelector} from'react-redux';
  import Login from './Views/Pages/Login/login';
  // import   './App.css';
-import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import { BrowserRouter as Router,Routes,Route} from 'react-router-dom';
  import Sidebar from './Views/Sidebar/sidebar';
  import Dashboard from './Views/Pages/Dashboard/dashboard';
  import ViewBugPage from './Views/Pages/ViewBugs';
@@ -11,18 +11,20 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 function  App () {
   const {auth} = useSelector (state=>state)
    return (
-    <Router>
+     <Router>
      {!auth.LoggedIn ? <Login/> :
-     <>
+      <>
          <Sidebar/>
           <Routes>
              <Route path= "/" exact><Dashboard/></Route> 
               <Route path= "/viewBugs"><ViewBugPage/></Route> 
-            <Router path="/create"><div className='page-container'><CreateBug title='Create Bug'/></div></Router>
+             <Route path="/create"><div className='page-container'><CreateBug title='Create Bug'/></div></Route> 
+            {/* <Route path="/create"><div className='page-container'><CreateBug title='Create Bug'/></div></Route> */}
+
           </Routes>
     
   </>
-   }
+  }
     </Router>
   );
 }

@@ -40,6 +40,7 @@ const slice = createSlice({
             const { name, password } = action.payload;
             state.loggedIn = true;
             state.admin = true;
+            
         },
         signOut: (state) => {
             state.loggedIn = false;

@@ -36,7 +36,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getBugs } from '../../Controllers/redux/bugSlice';
+import { getBugs } from '../../Controllers/Redux/bugSlice';
 import BugCard from '../Components/BugCard/bugcard';
 import BugView from '../Components/BugView/bugView';
 

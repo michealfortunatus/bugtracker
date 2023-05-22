@@ -38,7 +38,7 @@ export function retrieveBugs() {
         name: "crash on load",
         details: 'crashes after 3 seconds',
         steps: 'open application and it will crash',
-        version: 'v2.0',
+        version: 'V2.0',
         assigned: 'michael',
         creator: 'fortune',
         priority: 1,
